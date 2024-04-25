@@ -1,22 +1,35 @@
 using CCSD_Job_Search.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CCSD_Job_Search.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace CCSD_Job_Search.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+
+        //private readonly ILogger<HomeController> _logger;
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.Job.ToListAsync());
         }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {

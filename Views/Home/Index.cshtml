@@ -1,8 +1,24 @@
-﻿@{
+﻿@model IEnumerable<CCSD_Job_Search.Models.Job>
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">CCSD Job Search</h1>
+    <p>Brought to you by the wonderful Web Design Team</p>
 </div>
+
+<div class="container">
+    <div class="row">
+ 
+        @foreach (var job in Model)
+        {
+            @Html.DisplayFor(modelItem => job.Title) <br />
+        }
+
+        
+    </div>
+</div>
+
+
+
