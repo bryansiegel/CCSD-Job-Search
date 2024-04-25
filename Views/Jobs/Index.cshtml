@@ -2,37 +2,40 @@
 
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+   
 }
 
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
-<table id="jobsTable">
+<table class="jobsTable striped" style="width:100%">
     <thead>
         <tr>
             <td>
-                @Html.DisplayNameFor(model => model.Title)
+                Title
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.JobCategory)
+                Job Category
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.grade)
+                Grade
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Ccode)
+                Ccode
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Division)
+                Division
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.Description)
+                Description
             </td>
             <td>
-                @Html.DisplayNameFor(model => model.FilePath)
+                Filepath
+            </td>
+            <td>
+
             </td>
             
         </tr>
@@ -40,12 +43,13 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.JobCategory)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.grade)
             </td>
