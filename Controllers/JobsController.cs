@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CCSD_Job_Search.Data;
 using CCSD_Job_Search.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CCSD_Job_Search.Controllers
 {
+    [Authorize]
     public class JobsController : Controller
     {
         private readonly ApplicationDbContext _context;
