@@ -10,31 +10,31 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table id="jobsTable">
     <thead>
         <tr>
-            <th>
+            <td>
                 @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.JobCategory)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.grade)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.Ccode)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.Division)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
+            </td>
+            <td>
                 @Html.DisplayNameFor(model => model.FilePath)
-            </th>
-            <th></th>
+            </td>
+            
         </tr>
     </thead>
     <tbody>

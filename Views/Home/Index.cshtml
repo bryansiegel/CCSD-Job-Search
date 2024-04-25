@@ -7,33 +7,38 @@
     <h1 class="display-4">CCSD Job Search</h1>
     <p>Brought to you by the wonderful Web Design Team</p>
 </div>
-
+<hr class="mb-5"/>
 <div class="container">
     <div class="row">
- 
-        <table>
-            <thead>
-                <tr>
-                    <td>Job Title</td>
-                    <td>Job Category</td>
-                    <td>Description</td>
-                    <td>FilePath</td>
-                </tr>
-            </thead>
+        <div class="column">
+            <table id="jobsTable" class="table table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <td>Job Title</td>
+                        <td>Job Category</td>
+                        <td>Description</td>
+                        <td>FilePath</td>
+                    </tr>
+                </thead>
 
-        @foreach (var job in Model)
-        {
-            <tr>
-                    <td>@Html.DisplayFor(modelItem => job.Title)</td>
-                    <td>@Html.DisplayFor(modelItem => job.JobCategory)</td>
-                    <td>@Html.DisplayFor(modelItem => job.Description)</td>
-                    <td>@Html.DisplayFor(modelItem => job.FilePath)</td>
+                @foreach (var job in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => job.Title)</td>
+                        <td>@Html.DisplayFor(modelItem => job.JobCategory)</td>
+                        <td>@Html.DisplayFor(modelItem => job.Description)</td>
+                        <td>@Html.DisplayFor(modelItem => job.FilePath)</td>
 
-            </tr>
-        }
-        </table>
-        
+                    </tr>
+                }
+            </table>
+        </div>
     </div>
+  
+ 
+
+        
+   
 </div>
 
 

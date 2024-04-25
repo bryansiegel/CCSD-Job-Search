@@ -25,3 +25,7 @@ body {
     background-image: url("../img/endless-constellation.png");
     background-size: cover;
 }
+
+.dataTables_length {
+    display:none;
+}
