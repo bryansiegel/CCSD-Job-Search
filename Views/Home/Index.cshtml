@@ -11,11 +11,27 @@
 <div class="container">
     <div class="row">
  
+        <table>
+            <thead>
+                <tr>
+                    <td>Job Title</td>
+                    <td>Job Category</td>
+                    <td>Description</td>
+                    <td>FilePath</td>
+                </tr>
+            </thead>
+
         @foreach (var job in Model)
         {
-            @Html.DisplayFor(modelItem => job.Title) <br />
-        }
+            <tr>
+                    <td>@Html.DisplayFor(modelItem => job.Title)</td>
+                    <td>@Html.DisplayFor(modelItem => job.JobCategory)</td>
+                    <td>@Html.DisplayFor(modelItem => job.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => job.FilePath)</td>
 
+            </tr>
+        }
+        </table>
         
     </div>
 </div>
