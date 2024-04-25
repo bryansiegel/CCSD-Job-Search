@@ -1,8 +1,19 @@
-﻿namespace CCSD_Job_Search.Models
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
+
+namespace CCSD_Job_Search.Models
 {
     public class Job
     {
+      public enum Category
+        {
+            Admin,
+            Support,
+            Licensed
+        }
+
         public int Id { get; set; }
+        public string JobCategory { get; set; }
         public string Title { get; set; }
         public int grade { get; set; }
         public string  Ccode { get; set; }

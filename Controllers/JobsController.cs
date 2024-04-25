@@ -54,7 +54,7 @@ namespace CCSD_Job_Search.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,grade,Ccode,Division,Description,FilePath")] Job job)
+        public async Task<IActionResult> Create([Bind("Id,JobCategory,Title,grade,Ccode,Division,Description,FilePath")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace CCSD_Job_Search.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,grade,Ccode,Division,Description,FilePath")] Job job)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,JobCategory,Title,grade,Ccode,Division,Description,FilePath")] Job job)
         {
             if (id != job.Id)
             {

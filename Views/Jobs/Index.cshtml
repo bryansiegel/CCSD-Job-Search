@@ -17,6 +17,9 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.JobCategory)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.grade)
             </th>
             <th>
@@ -37,6 +40,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobCategory)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
