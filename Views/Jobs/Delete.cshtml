@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h1>Delete</h1>
@@ -12,46 +13,112 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClassCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.JobCategory)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.JobCategory)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.JobFamily)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+            @Html.DisplayFor(model => model.JobFamily)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.grade)
+            @Html.DisplayNameFor(model => model.Classification)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.grade)
+            @Html.DisplayFor(model => model.Classification)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ccode)
+            @Html.DisplayNameFor(model => model.TermsOfEmployment)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ccode)
+            @Html.DisplayFor(model => model.TermsOfEmployment)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Division)
+            @Html.DisplayNameFor(model => model.FLSAStatus)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Division)
+            @Html.DisplayFor(model => model.FLSAStatus)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.PositionSummary)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.PositionSummary)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FilePath)
+            @Html.DisplayNameFor(model => model.EssentialDutiesAndResponsibilities)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FilePath)
+            @Html.DisplayFor(model => model.EssentialDutiesAndResponsibilities)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DistinguishingCharacteristics)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DistinguishingCharacteristics)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KnowledgeSkillsandAbilities)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KnowledgeSkillsandAbilities)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PositionRequirements)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PositionRequirements)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DocumentsRequiredAtTimeOfApplication)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DocumentsRequiredAtTimeOfApplication)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExamplesOfAssignedWorkAreas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExamplesOfAssignedWorkAreas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExamplesOfEquipmentSupplies)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExamplesOfEquipmentSupplies)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WorkEnvironment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WorkEnvironment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UpdatedAt)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UpdatedAt)
         </dd>
     </dl>
     

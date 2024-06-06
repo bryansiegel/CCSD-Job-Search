@@ -2,60 +2,64 @@
 
 @{
     ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_DetailsView.cshtml";
 }
 
-<h1>Details</h1>
 
-<div>
-    <h4>Job</h4>
-    <hr />
-    <dl class="row">
+@Html.DisplayNameFor(model => model.ClassCode)
+@Html.Raw(Model.ClassCode)
 
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.JobCategory)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.JobCategory)
-        </dt>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.grade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.grade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ccode)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ccode)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Division)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Division)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FilePath)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FilePath)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+@Html.DisplayNameFor(model => model.JobTitle)
+@Html.Raw(Model.JobTitle)
+
+@Html.DisplayNameFor(model => model.JobCategory)
+@Html.Raw(Model.JobCategory)
+
+@Html.DisplayNameFor(model => model.JobFamily)
+@Html.Raw(Model.JobFamily)
+
+@Html.DisplayNameFor(model => model.Classification)
+@Html.Raw(Model.Classification)
+
+@Html.DisplayNameFor(model => model.TermsOfEmployment)
+@Html.Raw(Model.TermsOfEmployment)
+
+@Html.DisplayNameFor(model => model.FLSAStatus)
+@Html.Raw(Model.FLSAStatus)
+
+@Html.DisplayNameFor(model => model.PositionSummary)
+@Html.Raw(Model.PositionSummary)
+
+@Html.DisplayNameFor(model => model.EssentialDutiesAndResponsibilities)
+@Html.Raw(Model.EssentialDutiesAndResponsibilities)
+
+@Html.DisplayNameFor(model => model.DistinguishingCharacteristics)
+@Html.Raw(Model.DistinguishingCharacteristics)
+
+@Html.DisplayNameFor(model => model.KnowledgeSkillsandAbilities)
+@Html.Raw(Model.KnowledgeSkillsandAbilities)
+
+@Html.DisplayNameFor(model => model.PositionRequirements)
+@Html.Raw(Model.PositionRequirements)
+
+@Html.DisplayNameFor(model => model.DocumentsRequiredAtTimeOfApplication)
+@Html.Raw(Model.DocumentsRequiredAtTimeOfApplication)
+
+@Html.DisplayNameFor(model => model.ExamplesOfAssignedWorkAreas)
+@Html.Raw(Model.ExamplesOfAssignedWorkAreas)
+
+@Html.DisplayNameFor(model => model.ExamplesOfEquipmentSupplies)
+@Html.Raw(Model.ExamplesOfEquipmentSupplies)
+
+@Html.DisplayNameFor(model => model.WorkEnvironment)
+@Html.Raw(Model.WorkEnvironment)
+
+@Html.DisplayNameFor(model => model.CreatedAt)
+@Html.Raw(Model.CreatedAt)
+
+@Html.DisplayNameFor(model => model.UpdatedAt)
+@Html.Raw(Model.UpdatedAt)
+
+
+<a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+<a asp-action="Index">Back to List</a>

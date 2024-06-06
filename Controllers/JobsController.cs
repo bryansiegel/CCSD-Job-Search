@@ -7,11 +7,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CCSD_Job_Search.Data;
 using CCSD_Job_Search.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace CCSD_Job_Search.Controllers
 {
-    [Authorize]
     public class JobsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -56,7 +54,7 @@ namespace CCSD_Job_Search.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,JobCategory,Title,grade,Ccode,Division,Description,FilePath")] Job job)
+        public async Task<IActionResult> Create([Bind("Id,ClassCode,JobTitle,JobCategory,JobFamily,Classification,TermsOfEmployment,FLSAStatus,PositionSummary,EssentialDutiesAndResponsibilities,DistinguishingCharacteristics,KnowledgeSkillsandAbilities,PositionRequirements,DocumentsRequiredAtTimeOfApplication,ExamplesOfAssignedWorkAreas,ExamplesOfEquipmentSupplies,WorkEnvironment,CreatedAt,UpdatedAt")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +86,7 @@ namespace CCSD_Job_Search.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,JobCategory,Title,grade,Ccode,Division,Description,FilePath")] Job job)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ClassCode,JobTitle,JobCategory,JobFamily,Classification,TermsOfEmployment,FLSAStatus,PositionSummary,EssentialDutiesAndResponsibilities,DistinguishingCharacteristics,KnowledgeSkillsandAbilities,PositionRequirements,DocumentsRequiredAtTimeOfApplication,ExamplesOfAssignedWorkAreas,ExamplesOfEquipmentSupplies,WorkEnvironment,CreatedAt,UpdatedAt")] Job job)
         {
             if (id != job.Id)
             {

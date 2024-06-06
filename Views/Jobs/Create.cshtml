@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h1>Create</h1>
@@ -9,47 +10,93 @@
 <h4>Job</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+                <label asp-for="ClassCode" class="control-label"></label>
+                <input asp-for="ClassCode" class="form-control" />
+                <span asp-validation-for="ClassCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobTitle" class="control-label"></label>
+                <input asp-for="JobTitle" class="form-control" />
+                <span asp-validation-for="JobTitle" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="JobCategory" class="control-label"></label>
+                @* <input asp-for="JobCategory" class="form-control" /> *@
                 <select asp-for="JobCategory" class="form-control">
                     <option>Administrative Personnel</option>
-                    <option>Licensed Personnel</option>
                     <option>Support Professional</option>
+                    <option>Licensed Personnel</option>
                 </select>
                 <span asp-validation-for="JobCategory" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="grade" class="control-label"></label>
-                <input asp-for="grade" class="form-control" />
-                <span asp-validation-for="grade" class="text-danger"></span>
+                <label asp-for="JobFamily" class="control-label"></label>
+                <input asp-for="JobFamily" class="form-control" />
+                <span asp-validation-for="JobFamily" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Ccode" class="control-label"></label>
-                <input asp-for="Ccode" class="form-control" />
-                <span asp-validation-for="Ccode" class="text-danger"></span>
+                <label asp-for="Classification" class="control-label"></label>
+                <input asp-for="Classification" class="form-control" />
+                <span asp-validation-for="Classification" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Division" class="control-label"></label>
-                <input asp-for="Division" class="form-control" />
-                <span asp-validation-for="Division" class="text-danger"></span>
+                <label asp-for="TermsOfEmployment" class="control-label"></label>
+                <input asp-for="TermsOfEmployment" class="form-control" />
+                <span asp-validation-for="TermsOfEmployment" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label asp-for="FLSAStatus" class="control-label"></label>
+                <input asp-for="FLSAStatus" class="form-control" />
+                <span asp-validation-for="FLSAStatus" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="FilePath" class="control-label"></label>
-                <input asp-for="FilePath" class="form-control" />
-                <span asp-validation-for="FilePath" class="text-danger"></span>
+                <label asp-for="PositionSummary" class="control-label"></label>
+                <textarea asp-for="PositionSummary" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="PositionSummary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EssentialDutiesAndResponsibilities" class="control-label"></label>
+                <textarea asp-for="EssentialDutiesAndResponsibilities" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="EssentialDutiesAndResponsibilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistinguishingCharacteristics" class="control-label"></label>
+                <textarea asp-for="DistinguishingCharacteristics" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="DistinguishingCharacteristics" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KnowledgeSkillsandAbilities" class="control-label"></label>
+                <textarea asp-for="KnowledgeSkillsandAbilities" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="KnowledgeSkillsandAbilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PositionRequirements" class="control-label"></label>
+                <textarea asp-for="PositionRequirements" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="PositionRequirements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DocumentsRequiredAtTimeOfApplication" class="control-label"></label>
+                <textarea asp-for="DocumentsRequiredAtTimeOfApplication" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="DocumentsRequiredAtTimeOfApplication" class="text-danger"></span>
+            </div>
+@*             <div class="form-group">
+                <label asp-for="ExamplesOfAssignedWorkAreas" class="control-label"></label>
+                <input asp-for="ExamplesOfAssignedWorkAreas" class="form-control" />
+                <span asp-validation-for="ExamplesOfAssignedWorkAreas" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="ExamplesOfEquipmentSupplies" class="control-label"></label>
+                <input asp-for="ExamplesOfEquipmentSupplies" class="form-control" />
+                <span asp-validation-for="ExamplesOfEquipmentSupplies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkEnvironment" class="control-label"></label>
+                <textarea asp-for="WorkEnvironment" class="form-control textarea-editor"></textarea>
+                <span asp-validation-for="WorkEnvironment" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

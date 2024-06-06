@@ -2,69 +2,131 @@
 
 @{
     ViewData["Title"] = "Index";
-   
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Jobs</h1>
+<h1>Index</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Create A New Job</a>
+    <a asp-action="Create">Create New</a>
 </p>
-<table class="jobsTable striped" style="width:100%">
+<table class="table">
     <thead>
         <tr>
-            <td>
-                Title
-            </td>
-            <td>
-                Job Category
-            </td>
-            <td>
-                Grade
-            </td>
-            <td>
-                Ccode
-            </td>
-            <td>
-                Division
-            </td>
-            <td>
-                Description
-            </td>
-            <td>
-                Filepath
-            </td>
-            <td>
-
-            </td>
-            
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobFamily)
+            </th>
+           @*  <th>
+                @Html.DisplayNameFor(model => model.Classification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TermsOfEmployment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FLSAStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionSummary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EssentialDutiesAndResponsibilities)
+            </th> *@
+@*             <th>
+                @Html.DisplayNameFor(model => model.DistinguishingCharacteristics)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KnowledgeSkillsandAbilities)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionRequirements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentsRequiredAtTimeOfApplication)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamplesOfAssignedWorkAreas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExamplesOfEquipmentSupplies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkEnvironment)
+            </th> *@
+           @*  <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedAt)
+            </th> *@
+            <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.JobCategory)
             </td>
-
             <td>
-                @Html.DisplayFor(modelItem => item.grade)
+                @Html.DisplayFor(modelItem => item.JobFamily)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Classification)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Ccode)
+                @Html.DisplayFor(modelItem => item.TermsOfEmployment)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Division)
+                @Html.DisplayFor(modelItem => item.FLSAStatus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.PositionSummary)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FilePath)
+                @Html.DisplayFor(modelItem => item.EssentialDutiesAndResponsibilities)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DistinguishingCharacteristics)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KnowledgeSkillsandAbilities)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionRequirements)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentsRequiredAtTimeOfApplication)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExamplesOfAssignedWorkAreas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExamplesOfEquipmentSupplies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkEnvironment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedAt)
+            </td> *@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
